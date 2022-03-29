@@ -1,0 +1,15 @@
+//here I will post some useful functions from the wiringPi.h library
+//to have it at hand
+
+#include <wiringPi.h>                 //the library that we are using to declare GPIO pins
+
+int main(int argc, char **argv)       //just as void setup() on arduino
+
+wiringPiSetupGpio()                   //allows to declare all the GPIO pins on a board
+
+pinMode()                             //same as on arduino
+
+while(1)                              //just as void loop() on arduino
+
+digitalWrite()
+digitalRead()
