@@ -13,3 +13,11 @@ while(1)                              //just as void loop() on arduino
 
 digitalWrite()
 digitalRead()
+
+
+//useful linux funtions
+
+cd Coding //sets the Coding repository on raspberry pi
+
+g++ -o file_name file_name.cpp -lwiring //compiles the code
+./file_name //executes the code on raspberry pi
