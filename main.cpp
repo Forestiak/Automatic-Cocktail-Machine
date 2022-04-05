@@ -1,5 +1,4 @@
 #include <iostream>
-//#include <wiringPi.h>
 #include <thread>
 #include <chrono>
 #include <cstdlib>
@@ -22,16 +21,8 @@ using namespace HX711;
 using namespace std::this_thread;
 using namespace std::chrono;
 
-int checkWeight();
-int glassWarning();
-class Cocktails;
-
-
 
 int checkWeight() {
-
-    using namespace std;
-    using namespace HX711;
 
     const int dataPin = 17;
     const int clockPin = 27;
@@ -42,22 +33,19 @@ int checkWeight() {
 
     while(1){
 
-        const Mass m = hx.weight(10);
+        const Mass m = hx.weight(3);
 
         cout    << "\t" << m.getValue() << '\n'
                 << "\t" << m.toString(Mass::Unit::G) << '\n'
                 << endl;
 
-        if(m.getValue()>120)
+        if(m.getValue()>70)
             break;
         
-        sleep_for(seconds(2));      
+        sleep_for(seconds(1));      
     }
-
     return EXIT_SUCCESS;
-
 }
-
 
 
 class Cocktails {
@@ -71,32 +59,31 @@ class Cocktails {
             const int ginPump {PUMP_GIN_PIN};
             const int tonicPump {PUMP_TONIC_PIN};
 
+            int hh;
+            hh = lgGpiochipOpen(0);
 
-            //digitalWrite(ginPump, HIGH);
+            lgGpioClaimOutput(hh, 0, ginPump, 1);
+            lgGpioWrite(hh, ginPump, 1);
 
             checkWeight();
+            lgGpioWrite(hh, ginPump, 0);
 
             return 0;
-        }    
-    
+        }      
 };
 
-int glassWarning(){
-    
+int glassWarning(){   
     std::cout << "Put the glass under the nozzle and click continue" << std::endl;
-
     return 0;
 };
-
 
 
 int main(int argc, char **argv){
 
-    checkWeight();
+    Cocktails cocktails;
+    int hh;
+    hh = lgGpiochipOpen(0);
 
-    
-
-
-    return 0;
+    while(1)    
+        cocktails.ginTonic();
 }
-
