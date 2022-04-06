@@ -19,5 +19,5 @@ digitalRead()
 
 cd Coding //sets the Coding repository on raspberry pi
 
-g++ -o file_name file_name.cpp -lwiring //compiles the code
+g++ -o file_name file_name.cpp -lhx711 -lggpio //compiles the code
 ./file_name //executes the code on raspberry pi
