@@ -1,28 +1,11 @@
 class Cocktails {
     public:
 
-        void ginTonic(){
+        int ginTonic();
+        int ginHass();
+        int screwdriver();
+        int blackRussian();
+        int summerCollins();
 
-            #define GIN_WEIGHT  //add weight
-            #define TONIC_WEIGHT //add weight
-
-            static ginPump {PUMP_GIN_PIN};
-            static tonicPump {PUMP_TONIC_PUMP};
-            unsigned long long currentTime;
-            unsigned long long previousTime;
-
-            glassWarning();
-
-            
-
-
-
-
-
-
-    }
-
-
-
-
-}
+        int glassWarning();         //it requires compability with the GUI on the touchscreen
+};
