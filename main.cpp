@@ -128,9 +128,6 @@ int main(int argc, char **argv){
     int hh;
     hh = lgGpiochipOpen(0);
 
-      
-    //cocktails.ginTonic();
-
     for(;;)
         cocktails.ginTonic(200, 100, PUMP_GIN_PIN, PUMP_TONIC_PIN);
 
