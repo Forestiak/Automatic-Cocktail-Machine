@@ -1,5 +1,5 @@
-#ifndef COCKTAILSV2_H
-#define COCKTAILSV2_H
+#ifndef COCKTAILS2_H
+#define COCKTAILS2_H
 
 #include <iostream>
 #include <thread>
