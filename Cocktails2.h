@@ -56,7 +56,7 @@ class CocktailsV2 {
             lgGpioWrite(h, firstPumpPin, 0);                                                         
 
             //starts the loop in which we are checking for the current weight on the load cell and subtracting the weight which was on the load cell so far
-            for(;;){
+            while(1){
                 weight = checkWeight(); 
                 weight -= previousWeight;                     
                 cout << weight << endl;
@@ -77,7 +77,7 @@ class CocktailsV2 {
             lgGpioWrite(h, secondPumpPin, 0);                     
 
             //starts the loop in which we are checking for the current weight on the load cell and subtracting the weight which was on the load cell so far
-            for(;;){
+            while(1){
                 weight = checkWeight();
                 weight -= previousWeight;   
                 cout << weight << endl;              
@@ -93,29 +93,22 @@ class CocktailsV2 {
             lgGpioFree (h, firstPumpPin);           //Frees the GPIO. It is necessary to do it in order to avoid saving the old pumps configuration 
             lgGpioFree (h, secondPumpPin);          //Frees the GPIO. It is necessary to do it in order to avoid saving the old pumps configuration
         }
-
         //Functions in which we are specifying particular values
         void screwdriver(){
             prepareDrink(200, 100, PUMP_VODKA_PIN, PUMP_ORANGE_PIN);
         }
-
         void ginHass(){
             prepareDrink(100, 60, PUMP_GIN_PIN, PUMP_MANGO_PIN);
         }
-
         void summerCollins(){
             prepareDrink(300, 40, PUMP_GIN_PIN, PUMP_LEMONADE_PIN);
         }
-
         void blackRussian(){
             prepareDrink(300, 40, PUMP_VODKA_PIN, PUMP_COFFEE_PIN);
         }
-
         void ginTonic(){
             prepareDrink(300, 40, PUMP_GIN_PIN, PUMP_TONIC_PIN);
         }
-
-
 };
 
 #endif
