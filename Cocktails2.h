@@ -16,8 +16,8 @@ using namespace std::this_thread;
 using namespace std::chrono;
 
 double setWeight(){
-    AdvancedHX711 hx(dataPin, clockPin, refUnit, offset);
-    double previousWeight = hx.weight(15);
+    AdvancedHX711 hx(dataPin, clockPin, refUnit, offset);                                           //allows to use the HX711 library to obtain weight samples from the load cell
+    double previousWeight = hx.weight(15);                                                          //takes 15 samples of weight and outputs an average of them
 
     return previousWeight;
 }
