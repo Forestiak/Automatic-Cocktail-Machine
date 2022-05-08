@@ -1,0 +1,4 @@
+C:\Users\iza\OneDrive\Pulpit\coding\project\Project2\Debug\Project2.vcxproj.AssemblyReference.cache
+C:\Users\iza\OneDrive\Pulpit\coding\project\Project2\Debug\Project2.MyForm.resources
+C:\Users\iza\OneDrive\Pulpit\coding\project\Project2\Debug\Project2.vcxproj.GenerateResource.cache
+C:\Users\iza\OneDrive\Pulpit\coding\project\Project2\Debug\Project2.exe

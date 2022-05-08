@@ -1,0 +1,4 @@
+﻿  MyForm.cpp
+C:\Users\iza\OneDrive\Pulpit\coding\project\Project2\MyForm.cpp(8,33): warning C4829: Możliwe niepoprawne parametry funkcji main. Rozważ użycie "int main(Platform::Array<Platform::String^>^ argv)"
+  MyForm.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
+  Project2.vcxproj -> C:\Users\iza\OneDrive\Pulpit\coding\project\Project2\Debug\Project2.exe
