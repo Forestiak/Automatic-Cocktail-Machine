@@ -106,3 +106,52 @@ class Cocktails:
 
   def blackRussian(self):
     self.prepareDrink(const.VODKA_WEIGHT_BLACKRUSSIAN, const.COFFEE_WEIGHT, const.PUMP_VODKA_PIN, const.PUMP_COFFEE_PIN)
+    
+    
+    
+  def cleanPumps()
+    h = sbc.gpiochip_open(0)
+    
+    sbc.gpio_claim_output(h, PUMP_GIN_PIN, 1)
+    sbc.gpio_claim_output(h, PUMP_VODKA_PIN, 1)
+    sbc.gpio_claim_output(h, PUMP_MANGO_PIN, 1)
+    sbc.gpio_claim_output(h, PUMP_ORANGE_PIN, 1)
+    sbc.gpio_claim_output(h, PUMP_COFFEE_PIN, 1)
+    sbc.gpio_claim_output(h, PUMP_EIGHT_PIN, 1)
+    sbc.gpio_claim_output(h, PUMP_TONIC_PIN, 1)
+    sbc.gpio_claim_output(h, PUMP_LEMONADE_PIN, 1)
+    
+    time.sleep(2)
+    
+    sbc.gpio_write(h, PUMP_GIN_PIN, 0)
+    sbc.gpio_write(h, PUMP_VODKA_PIN, 0)
+    sbc.gpio_write(h, PUMP_MANGO_PIN, 0)
+    sbc.gpio_write(h, PUMP_ORANGE_PIN, 0)
+    sbc.gpio_write(h, PUMP_COFFEE_PIN, 0)
+    sbc.gpio_write(h, PUMP_LEMONADE_PIN, 0)
+    sbc.gpio_write(h, PUMP_EIGHT_PIN, 0)
+    sbc.gpio_write(h, PUMP_TONIC_PIN, 0)
+    
+    time.sleep(30)
+    
+    sbc.gpio_write(h, PUMP_GIN_PIN, 1)
+    sbc.gpio_write(h, PUMP_VODKA_PIN, 1)
+    sbc.gpio_write(h, PUMP_MANGO_PIN, 1)
+    sbc.gpio_write(h, PUMP_ORANGE_PIN, 1)
+    sbc.gpio_write(h, PUMP_COFFEE_PIN, 1)
+    sbc.gpio_write(h, PUMP_LEMONADE_PIN, 1)
+    sbc.gpio_write(h, PUMP_EIGHT_PIN, 1)
+    sbc.gpio_write(h, PUMP_TONIC_PIN, 1)
+    
+    sbc.gpio_free(h, PUMP_VODKA_PIN)
+    sbc.gpio_free(h, PUMP_GIN_PIN)
+    sbc.gpio_free(h, PUMP_MANGO_PIN)
+    sbc.gpio_free(h, PUMP_ORANGE_PIN)
+    sbc.gpio_free(h, PUMP_COFFEE_PIN)
+    sbc.gpio_free(h, PUMP_LEMONADE_PIN)
+    sbc.gpio_free(h, PUMP_EIGHT_PIN)
+    sbc.gpio_free(h, PUMP_TONIC_PIN)
+    
+    
+    
+    
