@@ -48,6 +48,9 @@ summerCollinsButton.place( relx=0.35, rely=0.6, relwidth=0.25, relheight=0.25)
 exitButton = tk.Button(frame, text="Exit", font=70, command=root.destroy)
 exitButton.place( relx=0.65, rely=0.6, relwidth=0.25, relheight=0.25)
 
+cleanButton = tk.Button(frame, text="Clean". font=70, command=x.cleanPumps)
+#leanButton.place(relx=0.65, rely=0.6, relwidth=0.25, relheight=0.25)
+
 root.attributes('-fullscreen', True)
 
 root.mainloop()
