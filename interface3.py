@@ -22,15 +22,33 @@ root = tk.Tk()
 canvas = tk.Canvas(root, height=500, width=1280)
 canvas.pack()
 
-# ginTonicImage = tk.PhotoImage(file='gin-and-tonic-drink.png')
 
+
+def warning(functionName):
+
+    newWindow = tk.Toplevel(root)
+    newWindow.title("warning")
+    
+    canvas = tk.Canvas(newWindow, width=1000, height=1280, bg="black")
+    canvas.pack()
+    
+    frame = tk.Frame(newWindow, bg="white")
+    frame.place(relheight=0.5, relwidth=0.5, relx=0.5, rely=0.3, anchor='n')
+
+    label = tk.Label(frame, text="Put the glass on the scale and click continue.")
+    label.pack()
+    
+    button = tk.Button(frame, text="Continue", command=lambda:[functionName(), newWindow.destroy()])
+    button.place(relx = 0.4, rely = 0.1, relwidth=0.25, relheight=0.25)
+
+    
+    
 frame = tk.Frame(root, bg='#80c1ff', bd=5)
-
 frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.8, anchor='n')
 
 
 
-ginTonicButton = tk.Button(frame, text="Gin Tonic", font=70, command=x.ginTonic)
+ginTonicButton = tk.Button(frame, text="Gin Tonic", font=70, command=lambda:warning(x.ginTonic))    #test this function call
 ginTonicButton.place(relx=0.05, rely=0.1, relwidth=0.25, relheight=0.25)
 
 ginHassButton = tk.Button(frame, text="Gin Hass", font=70, command=x.ginHass)
