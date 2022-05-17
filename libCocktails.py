@@ -112,26 +112,15 @@ class Cocktails:
   def cleanPumps()
     h = sbc.gpiochip_open(0)
     
-    sbc.gpio_claim_output(h, PUMP_GIN_PIN, 1)
-    sbc.gpio_claim_output(h, PUMP_VODKA_PIN, 1)
-    sbc.gpio_claim_output(h, PUMP_MANGO_PIN, 1)
-    sbc.gpio_claim_output(h, PUMP_ORANGE_PIN, 1)
-    sbc.gpio_claim_output(h, PUMP_COFFEE_PIN, 1)
-    sbc.gpio_claim_output(h, PUMP_EIGHT_PIN, 1)
-    sbc.gpio_claim_output(h, PUMP_TONIC_PIN, 1)
-    sbc.gpio_claim_output(h, PUMP_LEMONADE_PIN, 1)
-    
-    time.sleep(2)
-    
-    sbc.gpio_write(h, PUMP_GIN_PIN, 0)
-    sbc.gpio_write(h, PUMP_VODKA_PIN, 0)
-    sbc.gpio_write(h, PUMP_MANGO_PIN, 0)
-    sbc.gpio_write(h, PUMP_ORANGE_PIN, 0)
-    sbc.gpio_write(h, PUMP_COFFEE_PIN, 0)
-    sbc.gpio_write(h, PUMP_LEMONADE_PIN, 0)
-    sbc.gpio_write(h, PUMP_EIGHT_PIN, 0)
-    sbc.gpio_write(h, PUMP_TONIC_PIN, 0)
-    
+    sbc.gpio_claim_output(h, PUMP_GIN_PIN, 0)
+    sbc.gpio_claim_output(h, PUMP_VODKA_PIN, 0)
+    sbc.gpio_claim_output(h, PUMP_MANGO_PIN, 0)
+    sbc.gpio_claim_output(h, PUMP_ORANGE_PIN, 0)
+    sbc.gpio_claim_output(h, PUMP_COFFEE_PIN, 0)
+    sbc.gpio_claim_output(h, PUMP_EIGHT_PIN, 0)
+    sbc.gpio_claim_output(h, PUMP_TONIC_PIN, 0)
+    sbc.gpio_claim_output(h, PUMP_LEMONADE_PIN, 0)
+   
     time.sleep(30)
     
     sbc.gpio_write(h, PUMP_GIN_PIN, 1)
