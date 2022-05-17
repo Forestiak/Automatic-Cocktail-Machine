@@ -64,7 +64,7 @@ frame = tk.Frame(root, bg='#80c1ff', bd=5)
 frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.8, anchor='n')
 
 
-ginTonicButton = tk.Button(frame, text="Gin Tonic", font=70, command=lambda:warning(x.ginTonic))    #test this function call
+ginTonicButton = tk.Button(frame, text="Gin Tonic", font=70, command=lambda:warning(x.ginTonic))    
 ginTonicButton.place(relx=0.05, rely=0.1, relwidth=0.25, relheight=0.25)
 
 ginHassButton = tk.Button(frame, text="Gin Hass", font=70, command=lambda:warning(x.ginHass))
