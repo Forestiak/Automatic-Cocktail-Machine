@@ -10,7 +10,7 @@ PUMP_EIGHT_PIN = 27
 dataPin = 19
 clockPin = 26
 refUnit = 228
-offset = -148438
+offset = -147830
 
 GIN_WEIGHT_GINTONIC = 100
 GIN_WEIGHT_GINHASS = 100
