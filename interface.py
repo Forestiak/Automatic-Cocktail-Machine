@@ -44,6 +44,9 @@ def warning(functionName):
     continueButton = tk.Button(frame, text="Continue", command=lambda:[changeLabel(), functionName(), finishLabel(), newWindow.destroy()])       #lambda allows to execute few function within one click of a button
     continueButton.pack(side='top')
                      
+    breakButton = tk.Button(frame, text="X", bg='red', command=newWindow.destroy)
+    breakButton.place(relx=0.75, rely=0.1, relwidth=0.1, relheight=0.1)
+                     
     newWindow.attributes('-fullscreen', True)
 
 
