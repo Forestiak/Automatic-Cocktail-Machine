@@ -1,6 +1,5 @@
-import sys
-import tkinter as tk
 import os
+import tkinter as tk
 import libCocktails
 import lgpio as sbc
 import time
