@@ -1,3 +1,4 @@
+#declared pins of each pump
 PUMP_GIN_PIN = 23
 PUMP_TONIC_PIN = 24
 PUMP_MANGO_PIN = 4
@@ -7,11 +8,13 @@ PUMP_COFFEE_PIN = 17
 PUMP_LEMONADE_PIN = 18
 PUMP_EIGHT_PIN = 27
 
+#all values necessary to set up the load cell
 dataPin = 19
 clockPin = 26
 refUnit = 228
 offset = -147830
 
+#specific weights of each cocktail component in grams
 GIN_WEIGHT_GINTONIC = 100
 GIN_WEIGHT_GINHASS = 100
 GIN_WEIGHT_SUMMERCOLLINS = 100
