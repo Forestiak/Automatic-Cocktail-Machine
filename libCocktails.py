@@ -99,7 +99,7 @@ class Cocktails:
 
 
 
-#5 predefined drinks with given parameters taken from constans.py library
+#5 predefined drinks with given parameters taken from const.py library
 
   def screwdriver(self):
     self.prepareDrink(const.VODKA_WEIGHT_SCREWDRIVER, const.ORANGE_WEIGHT, const.PUMP_VODKA_PIN, const.PUMP_ORANGE_PIN)
