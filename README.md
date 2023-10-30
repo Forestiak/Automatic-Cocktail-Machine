@@ -1,2 +1,2 @@
 # Automatic-Cocktail-Machine
-This is the repository of the university project focused around an automatic cocktail machine
+This is a repository for AAU students working on Automatic Cocktail Machine in order to maximise the efficiency of bartending processes
